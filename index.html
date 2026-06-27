@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>panoptic.js test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #box {
+      text-align: center;
+    }
+    #id {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #111111;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div>your browser fingerprint:</div>
+    <div id="id">calculating...</div>
+  </div>
+
+  <script type="module">
+    import { fingerprint } from './index.js'
+    try {
+      const id = await fingerprint()
+      document.getElementById('id').innerText = id
+    } catch (e) {
+      document.getElementById('id').innerText = 'error'
+    }
+  </script>
+</body>
+</html>

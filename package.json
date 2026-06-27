@@ -1,0 +1,25 @@
+{
+  "name": "panoptic.js",
+  "version": "1.0.0",
+  "description": "zero-dependency browser fingerprinting engine",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./hash": "./hash.js",
+    "./canvas": "./canvas.js",
+    "./audio": "./audio.js",
+    "./webgl": "./webgl.js",
+    "./fonts": "./fonts.js",
+    "./environment": "./environment.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "keywords": [
+    "fingerprint",
+    "browser"
+  ],
+  "license": "MIT"
+}
